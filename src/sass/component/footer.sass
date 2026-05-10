@@ -1,0 +1,55 @@
+.orange
+    color: #ffb700
+.footer-text
+    font-size: 16px
+    line-height: 24px
+    color: #333333
+    font-weight: 300
+    font-style: italic
+    font-family: "Rubik"
+    text-align: center
+    margin: auto
+    padding-bottom: 36px
+    margin-top: 15px
+    
+.propositions 
+    h2
+        margin: 0
+        margin-top: 72px
+        padding: 0
+    h3
+        font-size: 18px
+        line-height: 22px
+        color: #333333
+        font-weight: 400
+        font-family: "Rubik"
+.inline
+    justify-content: space-between
+    display: flex
+    align-items: center
+.p10
+    padding: 25px 20px
+.blue-bike
+    position: relative
+    z-index: -1
+    img
+        display: block
+    &::before
+        content:""
+        position: absolute
+        top: 0  
+        left: 0
+        background-color: #0099ff
+        width: 60px
+        height: 100%
+    .bike
+        position: absolute
+        top: 50%
+        left: 10px
+        transform: translate(0,-50%)
+.orange
+    color: #ffb700
+    &::before
+        border-color: #ffb700 
+    &::after
+        border-color: #ffb700
