@@ -1,8 +1,11 @@
 header
-    background-image: url("../img/sea.jpg")
-    height: 1228px
-    background-size: contain
+    background-image: url("../img/sea.jpg") 
+    background-size: cover
     background-repeat: no-repeat
+    +media(768)
+        aspect-ratio: 1600/961
+        background-size: contain
+        background-position: center
     .small-text
       color: #ffffff
       margin: 10px auto 10px
@@ -15,8 +18,10 @@ header
   justify-content: space-between
   padding-top: 34px
   .nav-list
-    display: flex
+    display: none
     gap: 29px
+    +media(768)
+      display: flex
 .nav-list a 
   color: #fff
   text-transform: uppercase
@@ -43,3 +48,58 @@ p.dark
   display: block
   margin-top: 40px
   margin-bottom: 40px
+
+.burger 
+    display: block
+    width: 35px
+    height: 30px
+    cursor: pointer
+    position: relative
+    z-index: 1001
+    +media(786)
+      display: none
+
+.burger span 
+    display: block
+    position: relative
+    width: 100%
+    height: 3px
+    background: #fff
+    margin: 6px 0
+    transition: 0.3s
+    &::before , &::after
+      
+        content: ""
+        position: absolute
+        width: 100%
+        height: 3px
+        transition: 0.3s
+        transform: translateY(-50%,0)
+        background: #fff
+        top: -8px
+        left: 0
+    &::after
+        top: 8px
+.active
+    .burger span 
+        background: transparent
+        &::before
+            transform: rotate(45deg)
+            top: 0
+        &::after
+            transform: rotate(-45deg)
+            top: 0
+    .nav-list
+        display: flex
+        flex-direction: column
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        background-color: #0099ff
+        padding: 20px 0
+        height: 100vh
+        box-sizing: border-box
+        li
+          margin-left: 20px 

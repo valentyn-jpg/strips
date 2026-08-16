@@ -1,3 +1,6 @@
+@mixin media($size)
+    @media screen and (min-width:#{$size}px)
+        @content
 
 body,html
   margin: 0
@@ -13,14 +16,17 @@ ul,li
   padding: 0 5px
   max-width: 1160px
 .middle-text
-  font-size: 36px
+  font-size: 25px
   letter-spacing: 1px
-  line-height: 40px
+  line-height: 29px
   text-transform: uppercase
   color: #333333
   font-weight: 400
   font-family: "Rubik"
   text-align: center
+  +media(768)
+    font-size: 36px
+    line-height: 40px
 .big-text
   font-family: "Rubik"
 .small-text
@@ -48,36 +54,49 @@ ul,li
 .grey
   color: #999999
 h1
-  font-size: 72px
+  font-size: 55px
   letter-spacing: 1px
-  line-height: 110px
+  line-height: 75px
   text-transform: uppercase
   color: #ffffff
   font-weight: 300
   font-family: "Rubik"
   text-align: center
   margin: 0
+  +media(768)
+    font-size: 72px
+    line-height: 110px
 .submit
-  min-width: 170px
-  padding: 16px
+  min-width: 120px
+  padding: 12px
   text-align: center
   border-radius: 22px
   filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
   background-color: #ffb700
-  font-size: 16px
-  letter-spacing: 1px
+  font-size: 13px
   text-transform: uppercase
   color: #fdfcfb
   display: inline-block
   font-weight: 300
   font-family: "Rubik"
   text-align: center
+  +media(768)
+    letter-spacing: 1px
+    min-width: 170px
+    padding: 16px
+    font-size: 16px
 .blue-submit
   background-color: #fff
   color: #0099ff
   border: 2px solid #0099ff
 .cards
   display: flex
+  flex-wrap: wrap
+  row-gap: 30px
+  +media(768)
+    gap: 25px
+    flex-wrap: nowrap
+
 .card
   max-width: 270px
   &:hover
