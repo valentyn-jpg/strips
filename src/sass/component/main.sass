@@ -3,6 +3,8 @@
     display: flex
     margin-top: 90px
     gap: 25px
+    +media(576)
+        gap: 15px
     +media(786)
         justify-content: space-between
     .info
@@ -26,11 +28,18 @@
 .plans-link
     width: 100%
     display: flex
+    margin-top: 30px
     +media(768)
+        width: 100%
+        box-sizing: border-box
+        margin-top: 0
         padding-left: 15%
 .banner
     display: flex
     flex-direction: column
+    +media(576)
+        flex-direction: row
+        column-gap: 20px
     +media(768)
         flex-direction: row
     img
@@ -42,8 +51,11 @@
     .banner_buttons
         display: flex
         gap: 10px
+        align-content: center
     .banner_price
+        padding-bottom: 9px
         padding: 40px 64px
+        margin: 20px auto
         max-width: 285px
         box-sizing: border-box
         background-color: #edf2f5
@@ -75,6 +87,9 @@
         row-gap: 50px
         align-items: center
         flex-direction: column
+        +media(576)
+            flex-direction: row
+            column-gap: 20px
         +media(768)
             flex-direction: row
         
@@ -110,6 +125,8 @@
         width: 40%
 .wave
     max-width: 100%
+    +media(576)
+        max-width: 50%
     +media(768)
         max-width: 50%
 .commas
@@ -124,8 +141,11 @@
     padding-top: 35px
     width: 80%
     height: min-content
+    +media(576)
+        width: 50%
+        box-sizing: border-box
     +media(768)
-        width: 5 I, And then you can see that the two, the two rows are like that, and then you have the two rows that are Talk.0%
+        width: 50%
     .small-text
         text-align: left
     .tiny-text
