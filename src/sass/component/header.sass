@@ -3,14 +3,18 @@ header
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    +media(1660)
+        background-size: contain
     +media(768)
         aspect-ratio: 1600/961
-        background-size: contain
         background-position: center
     .small-text
       color: #ffffff
       margin: 10px auto 10px
-.logo span
+.logo
+  white-space: nowrap
+  margin-right: 20px
+  span
     font-size: 36px
     font-family: "Exo 2"
     color: #fff
@@ -67,7 +71,7 @@ p.dark
     cursor: pointer
     position: relative
     z-index: 1001
-    +media(786)
+    +media(768)
       display: none
 
 .burger span 

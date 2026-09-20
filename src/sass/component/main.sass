@@ -10,8 +10,24 @@
     .info
         h2, p
             text-align: center
-            +media(768)
+        +media(880)
+            text-align: Center
+            width: 100%
+            max-width: 100%
+            p
+                text-align: Center
+                max-width: 100%
+            a.submit
+                margin: auto
+        +media(1165)
+            max-width: 270px
+            text-align: left
+            p
                 text-align: left
+                max-width: 270px
+            a.submit
+                margin: 0 
+                display: inline-block
         a.submit
             margin: auto
             display: block
@@ -31,28 +47,34 @@
             +media(768)
                 text-align: left
 .plans-link
+    box-sizing: border-box
     width: 100%
     display: flex
     margin-top: 30px
     +media(768)
         width: 100%
-        box-sizing: border-box
         margin-top: 0
         padding-left: 15%
 .banner
     display: flex
     flex-direction: column
-    +media(768)
+    +media(1082)
         flex-direction: row
         column-gap: 20px
     +media(1288)
         flex-direction: row
     img
         width: 100%
-        max-width: 370px
+        display: block
+        +media(1082)
+            max-width: 370px
     .small-text
         text-align: left
         max-width: 458px
+        +media(1082)
+            max-width: 365px
+        +media(1288)
+            max-width: 458px
     .banner_buttons
         display: flex
         gap: 10px
@@ -84,7 +106,7 @@
         text-align: left
         line-height: 46px 
         color: #fff
-        +media(768)
+        +media(1082)
             font-size: 56px
             line-height: 66px
     .container
