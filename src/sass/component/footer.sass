@@ -21,6 +21,7 @@
         font-size: 18px
         text-align: left
         padding-left: 20px
+        padding-top: 20px
 
         
         line-height: 22px
@@ -106,6 +107,7 @@ h3.size
         h2
             margin: 0
             text-align: left
+            min-width: 270px
         .tiny-text
             padding-top: 0
             margin: 0
@@ -113,6 +115,15 @@ h3.size
             color: #fff
             padding-left: 20px
             padding-top: 19px
+        .cards
+            +media(1288)
+                justify-content: space-between
+        +media(1288)
+                padding-left: 0
+                padding-right: 0
+            
+
+
 .contact-box
     padding: 27px 43px
     box-sizing: border-box
@@ -121,6 +132,7 @@ h3.size
         white-space: nowrap
         margin: 0
         top: 0
+        padding: 0
         left: 50%
         transform: translate(-50%,-50%)
     .name-text
@@ -137,8 +149,12 @@ h3.size
     opacity: 1
 .frame-left 
     border-left: none
+    +media(768)
+        width: 20%
 .frame-right
     border-right: none
+    +media(768)
+        width: 20%
 a.phone
     padding-top: 34px
     display: block
