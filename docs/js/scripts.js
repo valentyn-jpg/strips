@@ -1,1 +1,1 @@
-const burger=document.querySelector(".burger"),nav=document.querySelector(".nav");burger.onclick=()=>{burger.classList.toggle("active"),nav.classList.toggle("active")};
+const burger=document.querySelector(".burger"),nav=document.querySelector(".nav"),links=document.querySelectorAll(".nav a");burger.onclick=()=>{burger.classList.toggle("active"),nav.classList.toggle("active")},links.forEach((e=>{e.onclick=()=>{burger.classList.remove("active"),nav.classList.remove("active")}}));
